@@ -1,0 +1,12 @@
+# Base de datos local
+database/data/
+
+# Dependencias (por si acaso corren npm install en la raiz)
+node_modules/
+
+# Variables de entorno
+.env
+backend/.env
+
+# Logs
+backend/logs/*.log
