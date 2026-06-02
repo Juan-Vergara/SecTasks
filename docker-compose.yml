@@ -32,18 +32,8 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    environment:
-      PORT: 3000
-      NODE_ENV: production
-      DB_HOST: db
-      DB_PORT: 3306
-      DB_USER: sectask
-      DB_PASSWORD: sectaskpass
-      DB_NAME: sectask_db
-      JWT_SECRET: cambia-esto-por-una-clave-larga-y-segura
-      JWT_EXPIRES_IN: 24h
-      RESET_TOKEN_EXPIRES_MINUTES: 10
-      RECAPTCHA_SECRET_KEY: cambia-esto-si-usas-recaptcha
+    env_file:
+      - .env.docker
     ports:
       - "3000:3000"
 

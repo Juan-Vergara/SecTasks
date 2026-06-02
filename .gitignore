@@ -6,6 +6,7 @@ node_modules/
 
 # Variables de entorno
 .env
+.env.docker
 backend/.env
 
 # Logs
