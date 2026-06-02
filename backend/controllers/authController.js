@@ -198,14 +198,14 @@ const AuthController = {
       // === EN DESARROLLO: Mostrar token en consola (sin enviar email) ===
       const resetUrl = `http://localhost:${process.env.PORT || 3000}/reset-password.html?token=${resetToken}`;
       
-      console.log('\n========================================');
-      console.log('🔑 TOKEN DE RECUPERACIÓN DE CONTRASEÑA');
-      console.log('========================================');
+      console.log('\n------------------------------------');
+      console.log(' TOKEN DE RECUPERACIÓN DE CONTRASEÑA');
+      console.log('------------------------------------');
       console.log(`   Usuario: ${user.username} (${user.email})`);
       console.log(`   Token:   ${resetToken}`);
       console.log(`   URL:     ${resetUrl}`);
       console.log(`   Expira:  ${expiresAt.toLocaleString()}`);
-      console.log('========================================\n');
+      console.log('------------------------------------\n');
 
       // Registrar evento (RNF2)
       await AuditModel.log(user.id, 'SOLICITUD_RESET_PASSWORD', null, req.ip);

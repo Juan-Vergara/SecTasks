@@ -20,11 +20,11 @@ const pool = mysql.createPool({
 async function testConnection() {
   try {
     const connection = await pool.getConnection();
-    console.log('✅ Conexión a MySQL establecida correctamente');
+    console.log('Conexión a MySQL establecida correctamente');
     connection.release();
   } catch (error) {
-    console.error('❌ Error al conectar a MySQL:', error.message);
-    console.error('   Verifica que MySQL esté corriendo y la base de datos exista.');
+    console.error('Error al conectar a MySQL:', error.message);
+    console.error('Verifica que MySQL esté corriendo y la base de datos exista.');
     process.exit(1);
   }
 }
